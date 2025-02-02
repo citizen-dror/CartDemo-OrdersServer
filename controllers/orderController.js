@@ -1,12 +1,15 @@
+const { v4: uuidv4 } = require("uuid"); 
 const orderService = require("../services/orderService");
 
 exports.createOrder = async (req, res) => {
   try {
-    const { orderId, firstName, lastName, email, address, items } = req.body;
+    const { firstName, lastName, email, address, items } = req.body;
 
-    if (!orderId || !firstName || !lastName || !email || !address || !items) {
+    if (!firstName || !lastName || !email || !address || !items) {
       return res.status(400).json({ error: "Missing required fields" });
     }
+
+    const orderId = uuidv4(); // Generate a unique order ID
 
     const result = await orderService.createOrder({ orderId, firstName, lastName, email, address, items });
     res.status(201).json({ message: "Order inserted", result });
