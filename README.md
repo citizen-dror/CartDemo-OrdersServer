@@ -5,4 +5,5 @@ A **Node.js service** for handling orders, including:
 - Retrieving existing orders  
 
 ### Related Repository  
-Check out the client application: [CartDemo-Client](https://github.com/citizen-dror/CartDemo-Client)  
+- Check out the client application: [CartDemo-Client](https://github.com/citizen-dror/CartDemo-Client)  
+- Products Server : [CartDemo-ProductsServer](https://github.com/citizen-dror/CartDemo-ProductsServer/)
